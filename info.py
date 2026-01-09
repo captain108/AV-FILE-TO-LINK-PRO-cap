@@ -15,9 +15,9 @@ def is_enabled(value, default):
 # 🤖 BOT INFO & CREDENTIALS
 # =========================================================
 SESSION = environ.get('SESSION', 'Webavbot')
-API_ID = int(environ.get('API_ID', '12380656'))
-API_HASH = environ.get('API_HASH', 'd927c13beaaf5110f25c505b7c071273')
-BOT_TOKEN = environ.get('BOT_TOKEN', '7091587168:AAF8TzmnNYW73ijc21xIUUuseLU41xa5bRA')
+API_ID = int(environ.get('API_ID', '12000656'))
+API_HASH = environ.get('API_HASH', 'd927c13beaaf5110f2c071273')
+BOT_TOKEN = environ.get('BOT_TOKEN', '70917168:AAF8TzmnNYW721xIUUuseLU41xa5bRA')
 
 # Admin Settings
 ADMINS = [int(x) for x in environ.get('ADMINS', '5977931010').split()]
@@ -26,7 +26,7 @@ OWNER_USERNAME = environ.get("OWNER_USERNAME", 'BOT_OWNER26')
 # =========================================================
 # 🗄️ DATABASE CONNECTION
 # =========================================================
-DB_URL = environ.get('DATABASE_URI', "mongodb+srv://testing1:avbotz@testing.kwuyv1a.mongodb.net/?appName=testing")
+DB_URL = environ.get('DATABASE_URI', "mongodb+srv://teshsjsg1:axxxxtz@testing.kwuyhwka.mongodb.net/?appName=testing")
 DB_NAME = environ.get('DATABASE_NAME', "testing")
 
 # =========================================================
