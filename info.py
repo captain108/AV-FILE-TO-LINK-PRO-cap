@@ -15,13 +15,13 @@ def is_enabled(value, default):
 # 🤖 BOT INFO & CREDENTIALS
 # =========================================================
 SESSION = environ.get('SESSION', 'Webavbot')
-API_ID = int(environ.get('API_ID', '12000656'))
-API_HASH = environ.get('API_HASH', 'd927c13beaaf5110f2c071273')
-BOT_TOKEN = environ.get('BOT_TOKEN', '70917168:AAF8TzmnNYW721xIUUuseLU41xa5bRA')
+API_ID = int(environ.get('API_ID', ''))
+API_HASH = environ.get('API_HASH', '')
+BOT_TOKEN = environ.get('BOT_TOKEN', '')
 
 # Admin Settings
-ADMINS = [int(x) for x in environ.get('ADMINS', '5977931010').split()]
-OWNER_USERNAME = environ.get("OWNER_USERNAME", 'BOT_OWNER26')
+ADMINS = [int(x) for x in environ.get('ADMINS', '').split()]
+OWNER_USERNAME = environ.get("CAPTAINPAPAJ1", '')
 
 # =========================================================
 # 🗄️ DATABASE CONNECTION
@@ -33,32 +33,32 @@ DB_NAME = environ.get('DATABASE_NAME', "testing")
 # 📢 CHANNELS & LOGS
 # =========================================================
 # Mandatory Channels
-BIN_CHANNEL = int(environ.get("BIN_CHANNEL", '-1002114619001'))
-LOG_CHANNEL = int(environ.get("LOG_CHANNEL", '-1002114619001'))
+BIN_CHANNEL = int(environ.get("BIN_CHANNEL", ''))
+LOG_CHANNEL = int(environ.get("LOG_CHANNEL", ''))
 
 # Feature Specific Logs
-PREMIUM_LOGS = int(environ.get("PREMIUM_LOGS", '-1002114619001'))
-VERIFIED_LOG = int(environ.get('VERIFIED_LOG', '-1002114619001'))
-SUPPORT_GROUP = int(environ.get("SUPPORT_GROUP", "-1002114619001"))
+PREMIUM_LOGS = int(environ.get("PREMIUM_LOGS", ''))
+VERIFIED_LOG = int(environ.get('VERIFIED_LOG', ''))
+SUPPORT_GROUP = int(environ.get("SUPPORT_GROUP", ""))
 
 # Auth Channels (Safe Parsing)
-auth_channel_str = environ.get("AUTH_CHANNEL", "-1002114619001")
+auth_channel_str = environ.get("AUTH_CHANNEL", "")
 AUTH_CHANNEL = [int(x) for x in auth_channel_str.split()] if auth_channel_str else []
 
 # =========================================================
 # 🔗 LINKS & URLS
 # =========================================================
-CHANNEL = environ.get('CHANNEL', 'https://t.me/AV_BOTz_UPDATE')
-SUPPORT = environ.get('SUPPORT', 'https://t.me/AV_SUPPORT_GROUP')
-TUTORIAL_LINK_1 = environ.get('TUTORIAL_LINK_1', 'https://t.me/1')
-TUTORIAL_LINK_2 = environ.get('TUTORIAL_LINK_2', 'https://t.me/2')
+CHANNEL = environ.get('CHANNEL', 'https://t.me/')
+SUPPORT = environ.get('SUPPORT', 'https://t.me/')
+TUTORIAL_LINK_1 = environ.get('TUTORIAL_LINK_1', 'https://t.me/')
+TUTORIAL_LINK_2 = environ.get('TUTORIAL_LINK_2', 'https://t.me/')
 
 # =========================================================
 # 🔐 VERIFICATION & SHORTENER
 # =========================================================
-IS_VERIFY = is_enabled(environ.get("IS_VERIFY", "True"), True)
-IS_SECOND_VERIFY = is_enabled(environ.get("IS_SECOND_VERIFY", "True"), True)
-IS_SHORTLINK = is_enabled(environ.get('IS_SHORTLINK', "True"), True)
+IS_VERIFY = is_enabled(environ.get("IS_VERIFY", "False"), False)
+IS_SECOND_VERIFY = is_enabled(environ.get("IS_SECOND_VERIFY", "False"), False)
+IS_SHORTLINK = is_enabled(environ.get('IS_SHORTLINK', "False"), False)
 
 # Verification Config
 VERIFY_EXPIRE = int(environ.get('VERIFY_EXPIRE', 60)) # In Minutes/Hours based on logic
